@@ -79,7 +79,7 @@ Reference: 3rd Floor Diagram and Server Room
 
 ## 🖧 Packet Tracer Design
 
-Devices used (from presentation):
+Devices used:
 
 | Device Type | Quantity | Notes |
 |-------------|----------|-------|
@@ -94,7 +94,7 @@ Devices used (from presentation):
 
 ## 🔹 Security Measures
 
-From presentation (Security section):
+Security section:
 
 - Port security enabled on all switches  
 - Unused ports disabled  
@@ -184,3 +184,6 @@ Kasthuriarachchi, S.D., Perera, H.A.K.D., Jayasekera, P.Y.R., & Liyanage, R.S.H.
 - Jayasekera P.Y.R  
 - Kasthuriarachchi S.D  
 - Liyanage R.S.H
+```bash
+Copyright (c) 2020 Sadeep Dilshan Kasthuriarachchi
+```

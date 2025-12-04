@@ -175,7 +175,7 @@ See the `LICENSE` file for details.
 
 If you use or reference this work, please cite:
 ```bash
-Kasthuriarachchi, S.D., Perera, H.A.K.D., Jayasekera, P.Y.R., & Liyanage, R.S.H. (2020). Prototype Network design for Multi-Floor Educational Institute. [Online] Available at: https://github.com/sadeep654/Employee-Management-System (Accessed: date-you-accessed).
+Kasthuriarachchi, S.D., Perera, H.A.K.D., Jayasekera, P.Y.R., & Liyanage, R.S.H. (2020). Prototype Network design for Multi-Floor Educational Institute. [Online] Available at: https://github.com/sadeep654/Prototype-Network-design (Accessed: date-you-accessed).
 ```
 
 ## 🔹 Credits

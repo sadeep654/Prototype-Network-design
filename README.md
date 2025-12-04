@@ -17,9 +17,16 @@ The institute network spans **Ground Floor, 1st Floor, 2nd Floor, and 3rd Floor*
 
 ---
 
-## 🗂 Floor-by-Floor Network Layout
+## 🔹 Architecture
 
-### **Ground Floor**
+>### Architecture Summary
+<p align="center">
+  <img src="img/diagram11.png" width="100%" alt="EMS" />
+</p>
+
+### Floor-by-Floor Network Layout
+
+>### **Ground Floor**
 Reference: Ground Floor Diagram
 - 1 × 24/48-port switch  
 - User PCs (4)  
@@ -27,20 +34,20 @@ Reference: Ground Floor Diagram
 - Uplink to **R1** on the 3rd floor  
 - Used for administrative or general-purpose access
 
-### **1st Floor**
+>### **1st Floor**
 Reference: 1st Floor Diagram 
 - IT Lab environment  
 - Contains ~20–25 PCs arranged in rows  
 - Switch and router uplink section on the top-right of the lab  
 - Lab traffic uplinks to **R1**
 
-### **2nd Floor**
+>### **2nd Floor**
 Reference: 2nd Floor Diagram 
 - Another IT Lab with PCs  
 - Switch positioned to distribute traffic in multiple rows  
 - Connects upward to **R2** using vertical riser cable
 
-### **3rd Floor**
+>### **3rd Floor**
 Reference: 3rd Floor Diagram and Server Room
 - Server Room with:  
   - 3 Servers  
@@ -52,16 +59,14 @@ Reference: 3rd Floor Diagram and Server Room
 
 ---
 
-## 🧩 Logical Topology (Router Backbones)
+## 🔹 Logical Topology (Router Backbones)
 
-Reference: Topology Diagram (Drawing3.jpeg)
-
-Routers:
+>Routers:
 - **R1** – handles Ground + 1st Floor traffic  
 - **R2** – handles 2nd Floor  
 - **R3, R4** – form backbone redundancy (connected to each other and to R1/R2)
 
-Routing:
+>Routing:
 - Uses **RIPv2**
 - Supports:  
   - VLSM  
@@ -87,7 +92,7 @@ Devices used (from presentation):
 
 ---
 
-## 🛡 Security Measures
+## 🔹 Security Measures
 
 From presentation (Security section):
 
@@ -103,9 +108,9 @@ From presentation (Security section):
 
 ---
 
-## 🛠 Maintenance & Test Plan
+## 🔹 Maintenance & Test Plan
 
-Maintenance schedule:
+>Maintenance schedule:
 
 - **Weekly:**  
   - Software updates  
@@ -122,7 +127,7 @@ Maintenance schedule:
 
 ---
 
-## 📡 Inter-Floor Connectivity Verification
+## 🔹 Inter-Floor Connectivity Verification
 
 According to validation steps:
 - Ping from Ground → 2nd Floor  
@@ -159,7 +164,7 @@ The network is optimized for **education environments**, offering reliability, c
 
 ---
 
-## 📞 Contact / Credits
+## 🔹 Credits
 
 Group Members:
 - Perera H.A.K.D  

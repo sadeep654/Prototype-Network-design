@@ -21,7 +21,7 @@ The institute network spans **Ground Floor, 1st Floor, 2nd Floor, and 3rd Floor*
 
 >### Architecture Summary
 <p align="center">
-  <img src="img/diagram11.png" width="100%" alt="EMS" />
+  <img src="img/diagram.png" width="100%" alt="EMS" />
 </p>
 
 ### Floor-by-Floor Network Layout

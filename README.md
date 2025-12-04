@@ -1,25 +1,168 @@
-# Prototype-Network-design
-This project included designing a suitable network for a local educational institution, using cisco packet tracer.
+<!-- Repository Banner -->
+<p align="center">
+  <img src="img/banner.png" width="100%" alt="Project Banner" />
+</p>
 
+---
 
-<img width="1440" alt="Screenshot 2021-11-28 at 09 59 58" src="https://user-images.githubusercontent.com/76505825/143729665-26bb8ce8-85f2-4113-9fc4-43c950df0a8a.png">
+## 🔹 Overview
 
-<h1>Floors</h1>
+The institute network spans **Ground Floor, 1st Floor, 2nd Floor, and 3rd Floor**, each using dedicated switches, PCs, and printers. All network segments interconnect via a **four-router topology (R1, R2, R3, R4)** located on the 3rd floor. The 3rd floor also hosts the **internet gateway** and server infrastructure.
+>See the demo video below for a quick visual explanation of how the system works.
+<p align="center">
+  <img src="img/demo.gif" alt="Prototype-Network-design demo" width="1000px">
+</p>
+ 
+>Full system description referenced from project documentation.
 
-<h2>1.Ground Floor</h2>
+---
 
-![Ground_Floor-1](https://user-images.githubusercontent.com/76505825/143729744-6b7110b4-3f1a-4db3-ac2b-8e9d0431e6f4.jpg)
+## 🗂 Floor-by-Floor Network Layout
 
-<h2>2.First Floor</h2>
+### **Ground Floor**
+Reference: Ground Floor Diagram
+- 1 × 24/48-port switch  
+- User PCs (4)  
+- Printers (3)  
+- Uplink to **R1** on the 3rd floor  
+- Used for administrative or general-purpose access
 
-![1 st floor-1](https://user-images.githubusercontent.com/76505825/143729800-3a79f4ce-965f-4963-9f7f-a376381d0a3f.jpg)
+### **1st Floor**
+Reference: 1st Floor Diagram 
+- IT Lab environment  
+- Contains ~20–25 PCs arranged in rows  
+- Switch and router uplink section on the top-right of the lab  
+- Lab traffic uplinks to **R1**
 
-<h2>3.Second Floor</h2>
+### **2nd Floor**
+Reference: 2nd Floor Diagram 
+- Another IT Lab with PCs  
+- Switch positioned to distribute traffic in multiple rows  
+- Connects upward to **R2** using vertical riser cable
 
-![2 nd floor-1](https://user-images.githubusercontent.com/76505825/143729817-13c05cc0-ab21-44e0-889d-59c22d283f39.jpg)
+### **3rd Floor**
+Reference: 3rd Floor Diagram and Server Room
+- Server Room with:  
+  - 3 Servers  
+  - 1 Switch  
+  - Connection to Router Cluster  
+- Staff Section (Teachers, Marketing/Admin, Managers) with PCs and printers  
+- Switch + Router backbone connecting to **R3** and **R4**  
+- Internet connection enters here
 
-<h2>4.Third Floor</h2>
+---
 
-![3 rd floor-1](https://user-images.githubusercontent.com/76505825/143729820-1c31394c-4e0c-4c85-8e85-3c9450d8e5a1.jpg)
+## 🧩 Logical Topology (Router Backbones)
 
+Reference: Topology Diagram (Drawing3.jpeg)
 
+Routers:
+- **R1** – handles Ground + 1st Floor traffic  
+- **R2** – handles 2nd Floor  
+- **R3, R4** – form backbone redundancy (connected to each other and to R1/R2)
+
+Routing:
+- Uses **RIPv2**
+- Supports:  
+  - VLSM  
+  - Multicast updates  
+  - Triggered updates  
+  - Discontinuous networks  
+- Chosen because of a low number of routers and cost-effective design
+
+---
+
+## 🖧 Packet Tracer Design
+
+Devices used (from presentation):
+
+| Device Type | Quantity | Notes |
+|-------------|----------|-------|
+| Routers | 4 | Core inter-floor backbone |
+| Switches | 4 | Includes 48-port & 8-port |
+| Servers | 3 | Located on 3rd floor |
+| Lab PCs | 50 | Two IT labs |
+| Staff PCs | 35 | Teachers, Admin, Managers |
+| Printers | 3 | Distributed on floors |
+
+---
+
+## 🛡 Security Measures
+
+From presentation (Security section):
+
+- Port security enabled on all switches  
+- Unused ports disabled  
+- Router & switch passwords protected via:  
+  - Console password  
+  - Enable password  
+  - Encryption enabled  
+- Antivirus installed on all user devices  
+- DHCP assigns IPs to all floors  
+- VLANs for separation (Teachers, Admin, IT Labs, etc.)
+
+---
+
+## 🛠 Maintenance & Test Plan
+
+Maintenance schedule:
+
+- **Weekly:**  
+  - Software updates  
+  - Router, switch, and server health checks  
+  - Documentation updates  
+  - Security review  
+- **Monthly:**  
+  - Hardware inspection  
+- **Testing:**  
+  - Inter-VLAN pings  
+  - Floor-to-floor connectivity checks  
+  - DHCP address validation  
+  - Redundancy path verification (R3-R4 link)
+
+---
+
+## 📡 Inter-Floor Connectivity Verification
+
+According to validation steps:
+- Ping from Ground → 2nd Floor  
+- Ping from 1st Floor → 3rd Floor (Server 2)  
+- Ping across VLANs  
+- Ping from 1st Floor → Printer on Ground  
+
+All tests validated successful routing and VLAN communication.
+
+---
+
+## 📁 Files Included
+
+- Ground Floor Layout (`Ground_Floor.pdf`)  
+- First Floor Layout (`1 st floor.pdf`)  
+- Second Floor Layout (`2 nd floor.pdf`)  
+- Third Floor Layout (`3 rd floor.pdf`)  
+- Main Topology Design (`Drawing3.jpeg`)  
+- AIN Presentation (`AINtest1.pptx`)  
+
+---
+
+## 📌 Summary
+
+This design provides:
+- Redundancy using 4-router backbone  
+- Segregation using VLANs  
+- DHCP-based IP automation  
+- Security hardening with port security and encrypted passwords  
+- Scalable IT Lab configuration  
+- Centralized server infrastructure on the 3rd floor  
+
+The network is optimized for **education environments**, offering reliability, cost-efficiency, and scalability for future expansion.
+
+---
+
+## 📞 Contact / Credits
+
+Group Members:
+- Perera H.A.K.D  
+- Jayasekera P.Y.R  
+- Kasthuriarachchi S.D  
+- Liyanage R.S.H
